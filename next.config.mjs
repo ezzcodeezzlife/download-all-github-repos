@@ -1,9 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
+  output: "export",
   trailingSlash: true,
-  basePath: '/download-all-github-repos',
-  assetPrefix: '/download-all-github-repos/',
+  basePath: "/download-all-github-repos",
+  assetPrefix: "/download-all-github-repos/",
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -11,8 +11,8 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
-    unoptimized: true
-  }
-}
+    unoptimized: true,
+  },
+};
 
-export default nextConfig
+export default nextConfig;

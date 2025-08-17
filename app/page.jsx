@@ -1,17 +1,18 @@
-
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Separator } from "@/components/ui/separator"
-import { Github, Terminal, Copy } from "lucide-react"
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Separator } from "@/components/ui/separator";
+import { Github, Terminal, Copy } from "lucide-react";
 
 export default function GitHubRepoDownloader() {
-  const copyToClipboard = (text) => {
-    navigator.clipboard.writeText(text)
-  }
-
   return (
-    (<div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="border-b border-border">
         <div className="container mx-auto px-4 py-8">
@@ -21,9 +22,12 @@ export default function GitHubRepoDownloader() {
               <Terminal className="h-10 w-10" />
             </div>
             <div>
-              <h1 className="text-4xl font-bold">Download All GitHub Repositories</h1>
+              <h1 className="text-4xl font-bold">
+                Download All GitHub Repositories
+              </h1>
               <p className="text-xl text-muted-foreground mt-2">
-                Use GitHub CLI to clone all your repositories with a single command
+                Use GitHub CLI to clone all your repositories with a single
+                command
               </p>
             </div>
           </div>
@@ -37,49 +41,46 @@ export default function GitHubRepoDownloader() {
               GitHub CLI Method
             </CardTitle>
             <CardDescription className="text-lg">
-              The fastest and most reliable way to download all your repositories
+              The fastest and most reliable way to download all your
+              repositories
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-8">
             {/* Step 1: Installation */}
             <div className="space-y-4">
               <div className="flex items-center gap-3">
-                <div
-                  className="w-8 h-8 bg-muted text-foreground rounded-full flex items-center justify-center font-bold border">
+                <div className="w-8 h-8 bg-muted text-foreground rounded-full flex items-center justify-center font-bold border">
                   1
                 </div>
                 <h3 className="text-xl font-semibold">Install GitHub CLI</h3>
               </div>
 
               <div className="ml-11 space-y-3">
-                <p className="text-muted-foreground">Choose your operating system:</p>
+                <p className="text-muted-foreground">
+                  Choose your operating system:
+                </p>
                 <div className="grid gap-3">
-                   <Badge variant="secondary">Windows</Badge>
-                  <div
-                    className="flex items-center justify-between bg-muted/50 p-4 rounded-lg border">
+                  <Badge variant="secondary">Windows</Badge>
+                  <div className="flex items-center justify-between bg-muted/50 p-4 rounded-lg border">
                     <div className="flex items-center gap-3">
-                     
-                      <code className="text-sm font-mono">winget install GitHub.cli</code>
+                      <code className="text-sm font-mono">
+                        winget install GitHub.cli
+                      </code>
                     </div>
-                   
                   </div>
-                                <Badge variant="secondary">macOS</Badge>
-                  <div
-                    className="flex items-center justify-between bg-muted/50 p-4 rounded-lg border">
+                  <Badge variant="secondary">macOS</Badge>
+                  <div className="flex items-center justify-between bg-muted/50 p-4 rounded-lg border">
                     <div className="flex items-center gap-3">
-
                       <code className="text-sm font-mono">brew install gh</code>
                     </div>
-                   
                   </div>
- <Badge variant="secondary">Linux</Badge>
-                  <div
-                    className="flex items-center justify-between bg-muted/50 p-4 rounded-lg border">
+                  <Badge variant="secondary">Linux</Badge>
+                  <div className="flex items-center justify-between bg-muted/50 p-4 rounded-lg border">
                     <div className="flex items-center gap-3">
-                     
-                      <code className="text-sm font-mono">sudo apt install gh</code>
+                      <code className="text-sm font-mono">
+                        sudo apt install gh
+                      </code>
                     </div>
-                   
                   </div>
                 </div>
               </div>
@@ -90,19 +91,20 @@ export default function GitHubRepoDownloader() {
             {/* Step 2: Authentication */}
             <div className="space-y-4">
               <div className="flex items-center gap-3">
-                <div
-                  className="w-8 h-8 bg-muted text-foreground rounded-full flex items-center justify-center font-bold border">
+                <div className="w-8 h-8 bg-muted text-foreground rounded-full flex items-center justify-center font-bold border">
                   2
                 </div>
-                <h3 className="text-xl font-semibold">Authenticate with GitHub</h3>
+                <h3 className="text-xl font-semibold">
+                  Authenticate with GitHub
+                </h3>
               </div>
 
               <div className="ml-11 space-y-3">
-                <p className="text-muted-foreground">Login to access your private repositories:</p>
-                <div
-                  className="flex items-center justify-between bg-muted/50 p-4 rounded-lg border">
+                <p className="text-muted-foreground">
+                  Login to access your private repositories:
+                </p>
+                <div className="flex items-center justify-between bg-muted/50 p-4 rounded-lg border">
                   <code className="text-sm font-mono">gh auth login</code>
-                 
                 </div>
               </div>
             </div>
@@ -112,24 +114,44 @@ export default function GitHubRepoDownloader() {
             {/* Step 3: Download All Repos */}
             <div className="space-y-4">
               <div className="flex items-center gap-3">
-                <div
-                  className="w-8 h-8 bg-muted text-foreground rounded-full flex items-center justify-center font-bold border">
+                <div className="w-8 h-8 bg-muted text-foreground rounded-full flex items-center justify-center font-bold border">
                   3
                 </div>
-                <h3 className="text-xl font-semibold">Download All Your Repositories</h3>
+                <h3 className="text-xl font-semibold">
+                  Download All Your Repositories
+                </h3>
               </div>
 
               <div className="ml-11 space-y-3">
                 <p className="text-muted-foreground">
-                  This command will clone all your public and private repositories:
+                  Use the following command depending on your operating system:
                 </p>
-                <div
-                  className="flex items-center justify-between bg-muted/50 p-4 rounded-lg border">
-                  <code className="text-sm font-mono flex-1 pr-4">
-                    gh repo list --limit 1000 --json name,sshUrl | jq -r '.[].sshUrl' | xargs -I {"{}"} git clone {"{}"}
-                  </code>
-                  
+
+                <Badge variant="secondary">Windows (PowerShell)</Badge>
+
+                <div className="flex items-center justify-between bg-muted/50 p-4 rounded-lg border">
+                  <div className="flex-1">
+                    <code className="text-sm font-mono flex-1 pr-4">
+                      gh repo list &lt;OWNER_OR_USERNAME&gt; --limit 1000 --json
+                      sshUrl | ConvertFrom-Json | ForEach-Object &#123; git
+                      clone $_.sshUrl &#125;
+                    </code>
+                  </div>
                 </div>
+
+                {/* macOS / Linux */}
+                <Badge variant="secondary">Linux & macOS</Badge>
+
+                <div className="flex items-center justify-between bg-muted/50 p-4 rounded-lg border">
+                  <div className="flex-1">
+                    <code className="text-sm font-mono flex-1 pr-4">
+                      gh repo list &lt;OWNER_OR_USERNAME&gt; --limit 1000 --json
+                      sshUrl --jq '.[].sshUrl' | xargs -n1 git clone
+                    </code>
+                  </div>
+                </div>
+
+                {/* Windows PowerShell */}
               </div>
             </div>
           </CardContent>
@@ -138,14 +160,16 @@ export default function GitHubRepoDownloader() {
         {/* Footer */}
         <footer className="mt-16 pt-8 border-t border-border text-center">
           <div className="space-y-2">
-            <p className="text-lg font-medium">Ready to download all your repositories?</p>
+            <p className="text-lg font-medium">
+              Ready to download all your repositories?
+            </p>
             <p className="text-muted-foreground">
-              This method works for both public and private repositories, giving you complete access to your GitHub
-              projects.
+              This method works for both public and private repositories, giving
+              you complete access to your GitHub projects.
             </p>
           </div>
         </footer>
       </main>
-    </div>)
+    </div>
   );
 }

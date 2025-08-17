@@ -1,7 +1,7 @@
-import { GeistSans } from "geist/font/sans"
-import { GeistMono } from "geist/font/mono"
-import "./globals.css"
-import Script from "next/script"
+import { GeistSans } from "geist/font/sans";
+import { GeistMono } from "geist/font/mono";
+import "./globals.css";
+import Script from "next/script";
 
 export const metadata = {
   title: "Download All GitHub Repos - Bulk Repository Downloader Tool",
@@ -20,17 +20,16 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Download All GitHub Repos - Bulk Repository Downloader",
-    description: "Free tool to download all public GitHub repositories at once.",
+    description:
+      "Free tool to download all public GitHub repositories at once.",
   },
   robots: "index, follow",
   generator: "Next.js",
-}
+};
 
-export default function RootLayout({
-  children
-}) {
+export default function RootLayout({ children }) {
   return (
-    (<html lang="en" className="dark">
+    <html lang="en" className="dark">
       <head>
         <style>{`
 html {
@@ -42,7 +41,8 @@ html {
         {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-7KF5GCT2VJ"
-          strategy="afterInteractive" />
+          strategy="afterInteractive"
+        />
         <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
@@ -53,6 +53,6 @@ html {
         </Script>
       </head>
       <body>{children}</body>
-    </html>)
+    </html>
   );
 }
