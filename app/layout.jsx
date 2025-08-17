@@ -41,14 +41,14 @@ html {
         `}</style>
         {/* Google Analytics */}
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-XXXX"
+          src="https://www.googletagmanager.com/gtag/js?id=G-7KF5GCT2VJ"
           strategy="afterInteractive" />
         <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-XXXX');
+            gtag('config', 'G-7KF5GCT2VJ');
           `}
         </Script>
       </head>
