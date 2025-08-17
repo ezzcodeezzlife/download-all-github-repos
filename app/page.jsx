@@ -1,4 +1,4 @@
-"use client"
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -54,46 +54,32 @@ export default function GitHubRepoDownloader() {
               <div className="ml-11 space-y-3">
                 <p className="text-muted-foreground">Choose your operating system:</p>
                 <div className="grid gap-3">
+                   <Badge variant="secondary">Windows</Badge>
                   <div
                     className="flex items-center justify-between bg-muted/50 p-4 rounded-lg border">
                     <div className="flex items-center gap-3">
-                      <Badge variant="secondary">Windows</Badge>
+                     
                       <code className="text-sm font-mono">winget install GitHub.cli</code>
                     </div>
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      onClick={() => copyToClipboard("winget install GitHub.cli")}>
-                      <Copy className="h-4 w-4" />
-                    </Button>
+                   
                   </div>
-
+                                <Badge variant="secondary">macOS</Badge>
                   <div
                     className="flex items-center justify-between bg-muted/50 p-4 rounded-lg border">
                     <div className="flex items-center gap-3">
-                      <Badge variant="secondary">macOS</Badge>
+
                       <code className="text-sm font-mono">brew install gh</code>
                     </div>
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      onClick={() => copyToClipboard("brew install gh")}>
-                      <Copy className="h-4 w-4" />
-                    </Button>
+                   
                   </div>
-
+ <Badge variant="secondary">Linux</Badge>
                   <div
                     className="flex items-center justify-between bg-muted/50 p-4 rounded-lg border">
                     <div className="flex items-center gap-3">
-                      <Badge variant="secondary">Linux</Badge>
+                     
                       <code className="text-sm font-mono">sudo apt install gh</code>
                     </div>
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      onClick={() => copyToClipboard("sudo apt install gh")}>
-                      <Copy className="h-4 w-4" />
-                    </Button>
+                   
                   </div>
                 </div>
               </div>
@@ -116,12 +102,7 @@ export default function GitHubRepoDownloader() {
                 <div
                   className="flex items-center justify-between bg-muted/50 p-4 rounded-lg border">
                   <code className="text-sm font-mono">gh auth login</code>
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                    onClick={() => copyToClipboard("gh auth login")}>
-                    <Copy className="h-4 w-4" />
-                  </Button>
+                 
                 </div>
               </div>
             </div>
@@ -147,17 +128,7 @@ export default function GitHubRepoDownloader() {
                   <code className="text-sm font-mono flex-1 pr-4">
                     gh repo list --limit 1000 --json name,sshUrl | jq -r '.[].sshUrl' | xargs -I {"{}"} git clone {"{}"}
                   </code>
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                    onClick={() =>
-                      copyToClipboard(
-                        "gh repo list --limit 1000 --json name,sshUrl | jq -r '.[].sshUrl' | xargs -I {} git clone {}"
-                      )
-                    }
-                    className="shrink-0">
-                    <Copy className="h-4 w-4" />
-                  </Button>
+                  
                 </div>
               </div>
             </div>
